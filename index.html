@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EZIH Ventures Global - Premium Business Solutions | General Supply, Import & Export, Consultancy">
+    <meta name="keywords" content="business solutions, import export, procurement, logistics, consultancy, Nigeria, products">
+    <meta property="og:title" content="EZIH Ventures Global">
+    <meta property="og:description" content="Innovate • Empower • Grow - Premium Business Solutions for Global Growth">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:url" content="https://estherzazzy09-hue.github.io/Ezih_ventures_global/">
+    <title>EZIH Ventures Global - Premium Business Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">EZIH Ventures Global</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#values">Values</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>EZIH Ventures Global</h1>
+            <p class="tagline">Innovate • Empower • Grow</p>
+            <p class="subtitle">Premium Business Solutions for Global Growth</p>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="scrollToSection('products')">View Products</button>
+                <button class="cta-button secondary" onclick="scrollToContact()">Get In Touch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p class="intro-text">Ezih Ventures Global is a dynamic and reliable business dedicated to providing high-quality products and professional services to individuals, businesses, and organizations. We are committed to excellence, integrity, innovation, and customer satisfaction while building lasting relationships with our clients.</p>
+            
+            <div class="mission-vision">
+                <div class="card">
+                    <h3>🎯 Our Vision</h3>
+                    <p>To become one of the most trusted and respected global business brands, delivering quality products and outstanding services that exceed customer expectations.</p>
+                </div>
+                <div class="card">
+                    <h3>💡 Our Mission</h3>
+                    <p>To provide dependable business solutions through professionalism, innovation, and exceptional customer service while creating value for our clients and partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Premium Products</h2>
+            <p class="section-subtitle">Explore our extensive collection of high-quality products</p>
+            
+            <!-- Product Filter -->
+            <div class="product-filters">
+                <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+                <button class="filter-btn" onclick="filterProducts('supply')">General Supply</button>
+                <button class="filter-btn" onclick="filterProducts('import')">Import/Export</button>
+                <button class="filter-btn" onclick="filterProducts('construction')">Construction</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Sample Product 1 -->
+                <div class="product-card" data-category="supply">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/300x250?text=Product+1" alt="Premium Product 1" class="product-image">
+                        <div class="product-overlay">
+                            <button class="view-btn" onclick="openProductModal(1)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Product 1</h3>
+                        <p class="product-category">General Supply</p>
+                        <p class="product-description">High-quality product with excellent durability</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 2 -->
+                <div class="product-card" data-category="import">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/300x250?text=Product+2" alt="Premium Product 2" class="product-image">
+                        <div class="product-overlay">
+                            <button class="view-btn" onclick="openProductModal(2)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Product 2</h3>
+                        <p class="product-category">Import/Export</p>
+                        <p class="product-description">Certified international product</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 3 -->
+                <div class="product-card" data-category="construction">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/300x250?text=Product+3" alt="Premium Product 3" class="product-image">
+                        <div class="product-overlay">
+                            <button class="view-btn" onclick="openProductModal(3)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Product 3</h3>
+                        <p class="product-category">Construction Materials</p>
+                        <p class="product-description">Premium construction material</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 4 -->
+                <div class="product-card" data-category="supply">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/300x250?text=Product+4" alt="Premium Product 4" class="product-image">
+                        <div class="product-overlay">
+                            <button class="view-btn" onclick="openProductModal(4)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Product 4</h3>
+                        <p class="product-category">General Supply</p>
+                        <p class="product-description">Reliable and cost-effective solution</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 5 -->
+                <div class="product-card" data-category="import">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/300x250?text=Product+5" alt="Premium Product 5" class="product-image">
+                        <div class="product-overlay">
+                            <button class="view-btn" onclick="openProductModal(5)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Product 5</h3>
+                        <p class="product-category">Import/Export</p>
+                        <p class="product-description">Global standard quality</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Product 6 -->
+                <div class="product-card" data-category="construction">
+                    <div class="product-image-container">
+                        <img src="https://via.placeholder.com/300x250?text=Product+6" alt="Premium Product 6" class="product-image">
+                        <div class="product-overlay">
+                            <button class="view-btn" onclick="openProductModal(6)">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Product 6</h3>
+                        <p class="product-category">Construction Materials</p>
+                        <p class="product-description">Durable and tested materials</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Product" class="modal-image">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription" class="modal-description"></p>
+                    <div class="modal-details">
+                        <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+                        <p><strong>Quality:</strong> Premium Grade</p>
+                        <p><strong>Availability:</strong> In Stock</p>
+                    </div>
+                    <button class="cta-button" onclick="contactForProduct()">Inquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <section id="values" class="values">
+        <div class="container">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>🤝 Integrity</h3>
+                    <p>Honest and transparent business practices</p>
+                </div>
+                <div class="value-card">
+                    <h3>⭐ Excellence</h3>
+                    <p>Commitment to the highest standards</p>
+                </div>
+                <div class="value-card">
+                    <h3>💼 Professionalism</h3>
+                    <p>Expert guidance and professional service</p>
+                </div>
+                <div class="value-card">
+                    <h3>🚀 Innovation</h3>
+                    <p>Cutting-edge solutions for modern business</p>
+                </div>
+                <div class="value-card">
+                    <h3>✅ Reliability</h3>
+                    <p>Dependable services you can trust</p>
+                </div>
+                <div class="value-card">
+                    <h3>😊 Customer Satisfaction</h3>
+                    <p>Your success is our priority</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>📦 General Supply</h3>
+                    <p>High-quality products delivered with professionalism</p>
+                </div>
+                <div class="service-card">
+                    <h3>🌍 Import and Export</h3>
+                    <p>Global trade solutions with competitive pricing</p>
+                </div>
+                <div class="service-card">
+                    <h3>🛒 Procurement Services</h3>
+                    <p>Efficient procurement tailored to your needs</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚚 Logistics and Delivery</h3>
+                    <p>Timely and reliable delivery services</p>
+                </div>
+                <div class="service-card">
+                    <h3>📊 Business Consultancy</h3>
+                    <p>Expert guidance for business growth and optimization</p>
+                </div>
+                <div class="service-card">
+                    <h3>🏗️ Construction Materials Supply</h3>
+                    <p>Premium construction materials for quality projects</p>
+                </div>
+                <div class="service-card">
+                    <h3>🤖 Project Support Services</h3>
+                    <p>Comprehensive support throughout your projects</p>
+                </div>
+                <div class="service-card">
+                    <h3>💼 Trading and Distribution</h3>
+                    <p>Efficient trading and distribution networks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <h3>✨ High-Quality Products & Services</h3>
+                    <p>We maintain the highest standards in everything we deliver</p>
+                </div>
+                <div class="benefit">
+                    <h3>💰 Competitive Pricing</h3>
+                    <p>Best value for your investment</p>
+                </div>
+                <div class="benefit">
+                    <h3>⏰ Timely Delivery</h3>
+                    <p>On-time delivery guaranteed</p>
+                </div>
+                <div class="benefit">
+                    <h3>🎧 Professional Support</h3>
+                    <p>Dedicated customer support team</p>
+                </div>
+                <div class="benefit">
+                    <h3>🔐 Transparent Practices</h3>
+                    <p>Honest and transparent business conduct</p>
+                </div>
+                <div class="benefit">
+                    <h3>🤝 Long-Term Partnerships</h3>
+                    <p>Building relationships that last</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>📱 Phone:</strong> <a href="tel:+2347064273192">+234 07064273192</a></p>
+                    <p><strong>📧 Email:</strong> <a href="mailto:info@ezihventuresglobal.com">info@ezihventuresglobal.com</a></p>
+                    <p><strong>🌐 Website:</strong> <a href="https://www.ezihventuresglobal.com" target="_blank">www.ezihventuresglobal.com</a></p>
+                    <p><strong>📍 Address:</strong> Abuja, Nigeria</p>
+                    <div class="social-icons">
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="commitment">
+                    <h3>Our Commitment</h3>
+                    <p>At Ezih Ventures Global, we are committed to delivering quality, creating value, and building strong partnerships that contribute to the success of our clients.</p>
+                    <p class="tagline-bottom"><strong>Innovate • Empower • Grow</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EZIH Ventures Global. All rights reserved.</p>
+            <p class="footer-tagline">Innovate • Empower • Grow</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
